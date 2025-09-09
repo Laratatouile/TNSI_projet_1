@@ -10,41 +10,34 @@ def lancement(pos_x:int):
     screen.setup(width=1050, height=525)
     screen.setworldcoordinates(0, 0, 1400, 700)
     penup()
+    tracer(0, 0)
     speed(0)
 
 
     formes.rectangle(-100, -100, 1000000, 250, "#13721e", True, "#13721e")
     formes.rectangle(-100, 150, 1000000, 1000, "#98d1e9", True, "#98d1e9")
 
-    rue = Rue(0)
-    rue.draw()
-
-    goto(0, -1000)
+    rue(0)
 
 
 
+def rue(nombre:int):
+    """ affiche la rue avec nombre le numero de la rue """
+    nombre_immeubles = 5
+    decalage = nombre * 1400
+    decalage_cote = 150
+    decalage_batiments = 100
+    width_batiment = 140
 
 
-class Rue():
-    def __init__(self, nombre:int):
-        """ affiche la rue avec nombre le numero de la rue """
-        self.nombre_immeubles = 5
-        self.immeuble = immeuble.Immeuble()
-        self.decalage = nombre * 1400
-        self.decalage_cote = 150
-        self.decalage_batiments = 100
-        self.width_batiment = 140
-
-    def draw(self):
-        for i in range(self.nombre_immeubles):
-            self.immeuble.draw(self.decalage+self.decalage_cote+i*(self.decalage_batiments+self.width_batiment))
-
-
-
+    for i in range(nombre_immeubles):
+        immeuble.immeuble(decalage+decalage_cote+i*(decalage_batiments+width_batiment))
 
 
 
 
 
 lancement(0)
+goto(-100, 0)
+update()
 exitonclick()
