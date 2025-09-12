@@ -15,7 +15,8 @@ def lancement(pos_x:int):
 
 
     formes.rectangle(-100, -100, 1000000, 250, "#13721e", True, "#13721e")
-    formes.rectangle(-100, 150, 1000000, 1000, "#98d1e9", True, "#98d1e9")
+    bgcolor("#98d1e9")
+    #formes.rectangle(-100, 150, 1000000, 1000, "#98d1e9", True, "#98d1e9")
 
     rue(0)
 
@@ -39,5 +40,6 @@ def rue(nombre:int):
 
 lancement(0)
 goto(-100, 0)
+bgcolor("#000000")
 update()
 exitonclick()

@@ -107,6 +107,9 @@ def porte(x:int, y:int, nombre_fenetre:int) -> None:
     width = 30
     decalage_mur = 15
     decalage_objets = 10
+    clanche_x1 = 23
+    clanche_x2 = 28
+    clanche_y = 20
 
     couleur = "#{:06x}".format(random.randint(0, 0xFFFFFF))
     type_porte = random.randint(0, 1)
@@ -114,7 +117,13 @@ def porte(x:int, y:int, nombre_fenetre:int) -> None:
     if type_porte == 0:
         formes.rectangle(x+decalage_mur+(nombre_fenetre*(width+decalage_objets)), y, width, height, "#000000", True, couleur)
     elif type_porte == 1:
-        formes.trace_porte_arrondie(x, y, "#000000", couleur)
+        formes.trace_porte_arrondie(x+decalage_mur+(nombre_fenetre*(width+decalage_objets)), y, "#000000", couleur)
+    # clanche
+    formes.ligne(x+decalage_mur+(nombre_fenetre*(width+decalage_objets))+clanche_x1,
+                 y+clanche_y,
+                 x+decalage_mur+(nombre_fenetre*(width+decalage_objets))+clanche_x2,
+                 y+clanche_y,
+                 "#000000")
 
 
 
