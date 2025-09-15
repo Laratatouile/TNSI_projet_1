@@ -46,7 +46,7 @@ def etage(x:int, numero_etage:int, couleur_etage:str):
             if type_fenetre == 0:
                 fenetre(x, numero_etage*height+hauteur_rue, i)
             else:
-                balcon(x, numero_etage*height+hauteur_rue, i)
+                balcon(x+15+i*40, numero_etage*height+hauteur_rue)
 
 
 
@@ -72,33 +72,34 @@ def fenetre(x:int, y:int, nombre_fenetre:int):
         
 
 
+def creer_forme_balcon():
+    """ cree une forme pour le balcon """
+    balcon_shape = Shape("compound")
 
-def balcon(x:int, y:int, nombre_fenetre:int):
-    """ dessine la fenetre et le balcon """
-    fenetre_w = 30
-    fenetre_h = 50
-    decalage_mur = 15
-    decalage_objets = 10
-    couleur = "#3799c3"
-    balcon_hauteur = 25
+    # fenêtre (rectangle rempli bleu)
+    fenetre = ((0,0), (23,0), (23,36), (0,36))
+    balcon_shape.addcomponent(fenetre, "#3799c3", "black")
 
+    # barre horizontale du balcon
+    barre = ((-3,22),(27,22))
+    balcon_shape.addcomponent(barre, "black", "black")
 
-    decalage_x = decalage_mur + nombre_fenetre*(decalage_objets + fenetre_w)
-    formes.rectangle(x + decalage_x,
-                    y,
-                    fenetre_w,
-                    fenetre_h,
-                    "#000000",
-                    True,
-                    couleur)
-    formes.ligne(x+decalage_x-5, y+balcon_hauteur, x+decalage_x+ fenetre_w+5, y+balcon_hauteur, "#000000")
-    for i in range(0, 42, 3):
-        formes.ligne(x+decalage_x-5+i, y+balcon_hauteur, x+decalage_x-5+i, y, "#000000")
-    update()
+    # barres verticales 
+    for i in range(0,33,3):
+        barre_v = ((-3+i,22), (-3+i,0))
+        balcon_shape.addcomponent(barre_v, "black", "black")
+
+    # on enregistre la forme
+    register_shape("balcon", balcon_shape)
 
 
-        
 
+def balcon(x:int, y:int):
+    """ dessine un balcon """
+    setheading(90)
+    shape("balcon")
+    goto(x, y)
+    stamp()
 
 
 def porte(x:int, y:int, nombre_fenetre:int) -> None:
@@ -180,3 +181,8 @@ def toit(x:int, nombre_etages:int):
                         "#000000",
                         True,
                         couleur)
+        
+
+
+
+creer_forme_balcon()

@@ -2,8 +2,10 @@ from turtle import *
 import fonctions.formes as formes
 import objets.Immeuble as immeuble
 import math
+import time
 
 
+# fonction de lancement du programme
 def lancement() -> None:
     """ pos_x est la position a gauche de la fenetre pour permettre de se reperer """
 
@@ -11,6 +13,7 @@ def lancement() -> None:
     screen = Screen()
     screen.setup(width=1050, height=525)
     screen.setworldcoordinates(0, 0, 1400, 700)
+    title("les immeubles de turtle")
 
     # initialiser la turtle
     penup()
@@ -26,39 +29,38 @@ def lancement() -> None:
     soleil = Turtle()
     soleil.hideturtle()
 
-    global arret_deplacement
-    arret_deplacement = False
-
-    num_boucle = 0
-    boucle(soleil, num_boucle, screen)
+    i = 0
+    boucle(soleil, i, screen)
     mainloop()
 
 
+# la boucle princiale elle se relance toute seule avec ontimer
+def boucle(soleil, i:int, screen) -> None:
+    rue(i)
 
-def boucle(soleil, num_boucle:int, screen) -> None:
-    global arret_deplacement
-    arret_deplacement = True
-    rue(num_boucle)
-
-    if num_boucle % 2 == 0:
-        bgcolor("#98d1e9")
+    if i % 2 == 0:
+        couleur_ciel(time.time(), "nuit")
     else :
-        bgcolor("#000000")
+        couleur_ciel(time.time(), "jour")
     
     update()
 
-    soleil_obj(num_boucle*1400, soleil, (num_boucle+1)*1400, screen, ("soleil" if num_boucle % 2 == 0 else "lune"))
+    soleil_obj(i, soleil, screen, ("soleil" if i % 2 == 0 else "lune"), time.time())
 
-    num_boucle += 1
+    i += 1
 
-    arret_deplacement = False
-    deplacement_camera(num_boucle, -200)
+    deplacement_camera(i, time.time())
+
+    # effacer les anciens dessins pour eviter les lags importants
+    if i % 10 == 0:
+        clear()
+        formes.rectangle(-100, -100, 1000000, 250, "#13721e", True, "#13721e")
     
-    screen.ontimer(lambda:boucle(soleil, num_boucle, screen), int(1.4e4))
+    screen.ontimer(lambda:boucle(soleil, i, screen), int(8e3))
 
 
 
-
+# dessine une seule rue avec ses immeubles
 def rue(nombre:int):
     """ affiche la rue avec nombre le numero de la rue """
     nombre_immeubles = 5
@@ -74,21 +76,23 @@ def rue(nombre:int):
 
 
 # le soleil
-def soleil_obj(x:int, soleil, fin:int, screen, type:str) -> None:
+def soleil_obj(i:int, soleil:Turtle, screen, type:str, temps:float) -> None:
     """ fait bouger le soleil et la lune """
-    if x < fin:
+    temps_reste = time.time() - temps
+    if temps_reste <= 5:
         # effacer l'ancien soleil
         soleil.clear()
+        soleil_x = (i)*1400 + temps_reste*1400 / 5
         
 
         # afficher le nouveau
         if type == "soleil":
-            formes.cercle(x+50, fonction_soleil_lune(x), 25, "#e2d257", True, "#ffe312", soleil)
+            formes.cercle(soleil_x, fonction_soleil_lune(soleil_x), 25, "#e2d257", True, "#ffe312", soleil)
         elif type == "lune":
-            formes.cercle(x+50, fonction_soleil_lune(x), 25, "#555555", True, "#c1c1c1", soleil)
+            formes.cercle(soleil_x, fonction_soleil_lune(soleil_x), 25, "#555555", True, "#c1c1c1", soleil)
 
 
-        screen.ontimer(lambda:soleil_obj(x+6, soleil, fin, screen, type), 20)
+        screen.ontimer(lambda:soleil_obj(i, soleil, screen, type, temps), 20)
 
 
 
@@ -100,17 +104,50 @@ def fonction_soleil_lune(x:int) -> int:
 
 
 
-def deplacement_camera(i:int, decalage:int) -> None:
+def deplacement_camera(i:int, temps_depart:int) -> None:
     """ deplace la camera """
-    global arret_deplacement
-    if arret_deplacement:
-        print("arret du deplacement pour ne pas gener l'utilisateur")
-    elif 0 < decalage < 1400:
+    temps = time.time() - temps_depart
+    if 1 < temps < 6:
+        decalage = (temps - 1) * 1400 / 5
         setworldcoordinates((i-1)*1400+decalage, 0, (i)*1400+decalage, 700)
         update()
-        ontimer(lambda:deplacement_camera(i, decalage+4), 1)
-    elif decalage <= 0:
-        ontimer(lambda:deplacement_camera(i, decalage+4), 1)
+        ontimer(lambda:deplacement_camera(i, temps_depart), 1)
+    elif temps <= 1:
+        ontimer(lambda:deplacement_camera(i, temps_depart), 1)
+
+
+
+# changement de la couleur du ciel le matin et le soir
+def couleur_ciel(temps_depart:float, heure:str):
+    """ change la couleur du ciel le matin ou le soir """
+    temps = time.time() - temps_depart
+    if temps <= 5:
+        ontimer(lambda:couleur_ciel(temps_depart, heure), 50)
+    elif 5 < temps < 8:
+        couleur1 = (39, 245, 242)
+        couleur2 = (0, 0, 0)
+        etat_changement = (temps-5)/3
+        direction = (True if heure == "jour" else False)
+        couleur = _calcul_couleur(couleur1, couleur2, etat_changement, direction)
+        bgcolor(couleur)
+        ontimer(lambda:couleur_ciel(temps_depart, heure), 1)
+
+
+def _calcul_couleur(couleur1:tuple, couleur2:tuple, multiplicateur:float, direction:bool) -> str:
+    """
+        calcule une proportion entre la couleur 1 et 2
+        multiplicateur est entre 0 et 1
+        direction defini si on passe de la 1 a la 2 => True sinon false
+    """
+    couleur_return = ""
+    for i in range(3):
+        val = round((couleur1[i] - couleur2[i]) * (multiplicateur if direction else 1 - multiplicateur))
+        hex_val = hex(val)[2:]  # conversion en chaîne hex sans le "0x"
+        if len(hex_val) == 1:
+            hex_val = "0" + hex_val
+        couleur_return += hex_val
+    return f"#{couleur_return}"
+
 
 
 
