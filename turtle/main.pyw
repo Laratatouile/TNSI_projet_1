@@ -1,8 +1,7 @@
 from turtle import *
-import fonctions.formes as formes
+import objets.lumieres as lumieres
 import objets.Immeuble as immeuble
 import objets.exterieur as exterieur
-import math
 import time
 
 
@@ -53,9 +52,9 @@ def boucle(soleil, i:int, screen) -> None:
     exterieur.lampadaire(i+1)
 
     if i % 2 == 0:
-        exterieur.couleur_ciel(time.time(), "nuit")
+        lumieres.couleur_ciel(time.time(), "nuit", screen)
     else :
-        exterieur.couleur_ciel(time.time(), "jour")
+        lumieres.couleur_ciel(time.time(), "jour", screen)
     
     update()
 
@@ -106,5 +105,10 @@ def deplacement_camera(i:int, temps_depart:int) -> None:
 
 
 
-
-lancement()
+try:
+    lancement()
+    mainloop()
+except Exception as e:
+    print("fin de turtle : /!\\ cela peut etre cause par une erreur")
+    if e != None:
+        print(f"erreur : {e}")
