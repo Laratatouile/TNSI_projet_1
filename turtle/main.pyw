@@ -1,8 +1,10 @@
 from turtle import *
 import objets.lumieres as lumieres
 import objets.Immeuble as immeuble
+import objets.voitures as voitures
 import objets.exterieur as exterieur
 import time
+from sys import exit
 
 
 # fonction de lancement du programme
@@ -28,12 +30,17 @@ def lancement() -> None:
     # definir la turtle du soleil
     soleil = Turtle()
     soleil.hideturtle()
+    # definir la turtle des voitures
+    t_voiture = Turtle()
+    t_voiture.hideturtle
+    screen.register_shape("./turtle/images/voiture.gif")
 
     i = 0
 
     # dessiner les bases
     rue(0)
     exterieur.lampadaire(0)
+    voitures.voitures(time.time(), t_voiture, screen)
 
     boucle(soleil, i, screen)
     mainloop()
@@ -112,3 +119,4 @@ except Exception as e:
     print("fin de turtle : /!\\ cela peut etre cause par une erreur")
     if e != None:
         print(f"erreur : {e}")
+exit()

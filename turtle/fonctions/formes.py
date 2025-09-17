@@ -22,7 +22,7 @@ def carre(x:int, y:int, cote:int, color:str, fill:bool=False, fill_color:str="#f
 
 
 
-def rectangle(x:int, y:int, width:int, height:int, color:str, fill:bool=False, fill_color:str="#ffffff") -> None:
+def rectangle(x:int, y:int, width:int, height:int, color:str, fill:bool=False, fill_color:str="#ffffff", turtle=turtle) -> None:
     """ dessine un rectangle """
     turtle.goto(x, y)
     turtle.pencolor(color)
@@ -62,7 +62,7 @@ def cercle(x:int, y:int, radius:int, color:str, fill:bool=False, fill_color:str=
     
 
 
-def triangle(x1:int, y1:int, x2:int, y2:int, x3:int, y3:int, color:str, fill:bool=False, fill_color:str="#ffffff") -> None:
+def triangle(x1:int, y1:int, x2:int, y2:int, x3:int, y3:int, color:str, fill:bool=False, fill_color:str="#ffffff", turtle=turtle) -> None:
     """ dessine un triangle """
     turtle.goto(x1, y1)
     turtle.pendown()
@@ -80,7 +80,7 @@ def triangle(x1:int, y1:int, x2:int, y2:int, x3:int, y3:int, color:str, fill:boo
 
 
 
-def ligne(x1:int, y1:int, x2:int, y2:int, color:str) -> None:
+def ligne(x1:int, y1:int, x2:int, y2:int, color:str, turtle=turtle) -> None:
     """ trace une ligne en x1, y1, x2, y2 """
     turtle.goto(x1, y1)
     turtle.pendown()
@@ -90,7 +90,7 @@ def ligne(x1:int, y1:int, x2:int, y2:int, color:str) -> None:
 
 
 
-def trace_porte_arrondie(x, y, color:str, fill_color:str):
+def trace_porte_arrondie(x, y, color:str, fill_color:str, turtle=turtle):
     turtle.goto(x, y+35)
     turtle.pendown()
     turtle.setheading(-90)

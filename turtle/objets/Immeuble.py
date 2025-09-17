@@ -90,7 +90,7 @@ def creer_forme_balcon():
         balcon_shape.addcomponent(barre_v, "black", "black")
 
     # on enregistre la forme
-    register_shape("balcon", balcon_shape)
+    register_shape("balcon", balcon_shape)  
 
 
 
