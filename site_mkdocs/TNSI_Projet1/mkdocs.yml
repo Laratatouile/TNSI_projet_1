@@ -1,0 +1,13 @@
+site_name: My Docs
+
+nav:
+ - Accueil : index.md
+ - turtle : turtle.md
+
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - search.highlight
+    - content.code.copy
