@@ -1,8 +1,17 @@
-site_name: My Docs
+site_name: TNSI_Projet_1
 
 nav:
  - Accueil : index.md
- - turtle : turtle.md
+ - Turtle:
+   - main.pyw: turtle/main.md
+   - fonctions:
+     - formes.pyw: turtle/formes.md
+ - Ascii :
+   - Carré: ascii/carre.md
+   - Triangle: ascii/triangle.md
+   - Sapin: ascii/sapin.md
+ - Image Ascii: image_ascii.md
+   
 
 
 theme:
@@ -11,3 +20,18 @@ theme:
     - navigation.tabs
     - search.highlight
     - content.code.copy
+
+
+markdown_extensions:
+  - codehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

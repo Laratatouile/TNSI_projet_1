@@ -49,7 +49,7 @@ def lancement() -> None:
 
 
 # la boucle princiale elle se relance toute seule avec ontimer
-def boucle(soleil, i:int, screen) -> None:
+def boucle(soleil:Turtle, i:int, screen) -> None:
     # effacer les anciens dessins pour eviter les lags importants
     if i % 10 == 0 and i != 0:
         clear()

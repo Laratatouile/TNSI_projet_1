@@ -77,6 +77,7 @@ def triangle(x1:int, y1:int, x2:int, y2:int, x3:int, y3:int, color:str, fill:boo
         turtle.end_fill()
     turtle.penup()
     turtle.update()
+    return None
 
 
 
@@ -87,10 +88,11 @@ def ligne(x1:int, y1:int, x2:int, y2:int, color:str, turtle=turtle) -> None:
     turtle.pencolor(color)
     turtle.goto(x2, y2)
     turtle.penup()
+    return None
 
 
 
-def trace_porte_arrondie(x, y, color:str, fill_color:str, turtle=turtle):
+def trace_porte_arrondie(x:int, y:int, color:str, fill_color:str, turtle=turtle):
     turtle.goto(x, y+35)
     turtle.pendown()
     turtle.setheading(-90)
