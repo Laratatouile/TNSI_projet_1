@@ -32,7 +32,8 @@ def lancement() -> None:
     soleil.hideturtle()
     # definir la turtle des voitures
     t_voiture = Turtle()
-    t_voiture.hideturtle
+    t_voiture.hideturtle()
+    t_voiture.penup()
     screen.register_shape("./turtle/images/voiture.gif")
 
     i = 0
@@ -40,7 +41,8 @@ def lancement() -> None:
     # dessiner les bases
     rue(0)
     exterieur.lampadaire(0)
-    voitures.voitures(time.time(), t_voiture, screen)
+    # ligne a desactiver pour eviter le lag
+    # voitures.voitures(time.time(), t_voiture, screen)
 
     boucle(soleil, i, screen)
     mainloop()
@@ -114,7 +116,6 @@ def deplacement_camera(i:int, temps_depart:int) -> None:
 
 try:
     lancement()
-    mainloop()
 except Exception as e:
     print("fin de turtle : /!\\ cela peut etre cause par une erreur")
     if e != None:
