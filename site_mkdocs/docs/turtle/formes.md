@@ -1,7 +1,8 @@
-# le fichier formes.pyw
-## le fichier en petites etapes
+# <span style="color:white; background-color:#6b6b6bff; padding:180px; padding-top:25px; padding-bottom:25px;font-size:35px">le fichier formes.py</span>
 
-### la fonction `carre`
+## <u><span style="color:#d51515">le fichier en petites etapes</span></u><br>
+
+### <u><span style="color:#d51515">1) la fonction</span></u> `carre`<br>
 ```python
 def carre(x:int, y:int, cote:int, color:str, fill:bool=False, fill_color:str="#ffffff", turtle=turtle) -> None:
     """ dessine un carre """
@@ -22,17 +23,17 @@ def carre(x:int, y:int, cote:int, color:str, fill:bool=False, fill_color:str="#f
     return None
 ```
 Cette fonction prend en charge une grande liste d'arguments : <br>
- - x : la position $x$ en haut a gauche du carré<br>
- - y : la position $y$ en haut a gauche du carré<br>
- - cote : la longueur d'un cote (par defaut False)<br>
- - color : la couleur du carré<br>
- - fill : un booléen qui permet de savoir si on rempli ou pas le carré<br>
- - fill_color : la couleur de remplissage (par defaut blandc)<br>
- - turtle : la turtle qui permet de dessiner le carré (par defaut la turtle de base)<br>
+ - `x` : la position $x$ en haut a gauche du carré<br>
+ - `y` : la position $y$ en haut a gauche du carré<br>
+ - `cote` : la longueur d'un cote (par defaut False)<br>
+ - `color` : la couleur du carré<br>
+ - `fill` : un booléen qui permet de savoir si on rempli ou pas le carré<br>
+ - `fill_color` : la couleur de remplissage (par defaut blandc)<br>
+ - `turtle` : la turtle qui permet de dessiner le carré (par defaut la turtle de base)<br>
 
 
 
-### la fonction `rectangle`
+### <u><span style="color:#d51515">1) la fonction</span></u> `rectangle`<br>
 ```python
 def rectangle(x:int, y:int, width:int, height:int, color:str, fill:bool=False, fill_color:str="#ffffff", turtle=turtle) -> None:
     """ dessine un rectangle """
@@ -56,18 +57,18 @@ def rectangle(x:int, y:int, width:int, height:int, color:str, fill:bool=False, f
 ```
 
 Cette fonction prend en charge une grande liste d'arguments : <br>
- - x : la position $x$ en haut a gauche du rectangle<br>
- - y : la position $y$ en haut a gauche du rectangle<br>
- - width : la largeur du recrangle <br>
- - height : la hauteur du rectangle <br>
- - color : la couleur du rectangle<br>
- - fill : un booléen qui permet de savoir si on rempli ou pas le rectangle<br>
- - fill_color : la couleur de remplissage (par defaut blandc)<br>
- - turtle : la turtle qui permet de dessiner le rectangle (par defaut la turtle de base)<br>
+ - `x` : la position $x$ en haut a gauche du rectangle<br>
+ - `y` : la position $y$ en haut a gauche du rectangle<br>
+ - `width` : la largeur du recrangle <br>
+ - `height` : la hauteur du rectangle <br>
+ - `color` : la couleur du rectangle<br>
+ - `fill` : un booléen qui permet de savoir si on rempli ou pas le rectangle<br>
+ - `fill_color` : la couleur de remplissage (par defaut blandc)<br>
+ - `turtle` : la turtle qui permet de dessiner le rectangle (par defaut la turtle de base)<br>
 
 
 
-### la fonction `cercle`
+### <u><span style="color:#d51515">1) la fonction</span></u> `cercle`<br>
 ```python
 def cercle(x:int, y:int, radius:int, color:str, fill:bool=False, fill_color:str="#ffffff", turtlle=turtle) -> None:
     """ dessine un cercle """
@@ -87,17 +88,17 @@ def cercle(x:int, y:int, radius:int, color:str, fill:bool=False, fill_color:str=
 ```
 
 Cette fonction prend en charge une grande liste d'arguments : <br>
- - x : la position $x$ a gauche du cercle<br>
- - y : la position $y$ a gauche du cercle<br>
- - radius : le rayon du cercle<br>
- - color : la couleur du cercle<br>
- - fill : un booléen qui permet de savoir si on rempli ou pas le cercle<br>
- - fill_color : la couleur de remplissage (par defaut blandc)<br>
- - turtle : la turtle qui permet de dessiner le cercle (par defaut la turtle de base)<br>
+ - `x` : la position $x$ a gauche du cercle<br>
+ - `y` : la position $y$ a gauche du cercle<br>
+ - `radius` : le rayon du cercle<br>
+ - `color` : la couleur du cercle<br>
+ - `fill` : un booléen qui permet de savoir si on rempli ou pas le cercle<br>
+ - `fill_color` : la couleur de remplissage (par defaut blandc)<br>
+ - `turtle` : la turtle qui permet de dessiner le cercle (par defaut la turtle de base)<br>
 
 
 
-### la fonction `triangle`
+### <u><span style="color:#d51515">1) la fonction</span></u> `triangle`<br>
 ```python
 def triangle(x1:int, y1:int, x2:int, y2:int, x3:int, y3:int, color:str, fill:bool=False, fill_color:str="#ffffff", turtle=turtle) -> None:
     """ dessine un triangle """
@@ -118,20 +119,20 @@ def triangle(x1:int, y1:int, x2:int, y2:int, x3:int, y3:int, color:str, fill:boo
 ```
 
 Cette fonction prend en charge une grande liste d'arguments : <br>
- - x1 : la position $x$ du premier point<br>
- - y1 : la position $y$ du premier point<br>
- - x2 : la position $x$ du deuxième point<br>
- - y2 : la position $y$ du deuxième point<br>
- - x3 : la position $x$ du troisième point<br>
- - y3 : la position $y$ du troisième point<br>
- - color : la couleur du triangle<br>
- - fill : un booléen qui permet de savoir si on rempli ou pas le triangle<br>
- - fill_color : la couleur de remplissage (par defaut blandc)<br>
- - turtle : la turtle qui permet de dessiner le triangle (par defaut la turtle de base)<br>
+ - `x1` : la position $x$ du premier point<br>
+ - `y1` : la position $y$ du premier point<br>
+ - `x2` : la position $x$ du deuxième point<br>
+ - `y2` : la position $y$ du deuxième point<br>
+ - `x3` : la position $x$ du troisième point<br>
+ - `y3` : la position $y$ du troisième point<br>
+ - `color` : la couleur du triangle<br>
+ - `fill` : un booléen qui permet de savoir si on rempli ou pas le triangle<br>
+ - `fill_color` : la couleur de remplissage (par defaut blandc)<br>
+ - `turtle` : la turtle qui permet de dessiner le triangle (par defaut la turtle de base)<br>
 
 
 
-### la fonction `ligne`
+### <u><span style="color:#d51515">1) la fonction</span></u> `ligne`<br>
 ```python
 def ligne(x1:int, y1:int, x2:int, y2:int, color:str, turtle=turtle) -> None:
     """ trace une ligne en x1, y1, x2, y2 """
@@ -144,16 +145,16 @@ def ligne(x1:int, y1:int, x2:int, y2:int, color:str, turtle=turtle) -> None:
 ```
 
 Cette fonction prend en charge une grande liste d'arguments : <br>
- - x1 : la position $x$ du premier point<br>
- - y1 : la position $y$ du premier point<br>
- - x2 : la position $x$ du deuxième point<br>
- - y2 : la position $y$ du deuxième point<br>
- - color : la couleur du triangle<br>
- - turtle : la turtle qui permet de dessiner le triangle (par defaut la turtle de base)<br>
+ - `x1` : la position $x$ du premier point<br>
+ - `y1` : la position $y$ du premier point<br>
+ - `x2` : la position $x$ du deuxième point<br>
+ - `y2` : la position $y$ du deuxième point<br>
+ - `color` : la couleur du triangle<br>
+ - `turtle` : la turtle qui permet de dessiner le triangle (par defaut la turtle de base)<br>
 
 
 
-### la fonction `trace_porte_arrondie`
+### <u><span style="color:#d51515">1) la fonction</span></u> `trace_porte_arrondie`<br>
 ```python
 def trace_porte_arrondie(x:int, y:int, color:str, fill_color:str, turtle=turtle):
     turtle.goto(x, y+35)
@@ -186,11 +187,11 @@ def trace_porte_arrondie(x:int, y:int, color:str, fill_color:str, turtle=turtle)
 ```
 
 Cette fonction prend en charge une grande liste d'arguments : <br>
- - x : la position $x$ en bas a gauche de la porte<br>
- - y : la position $y$ en bas a gauche de la porte<br>
- - color : la couleur de la porte<br>
- - fill_color : la couleur de remplissage (par defaut blandc)<br>
- - turtle : la turtle qui permet de dessiner la porte (par defaut la turtle de base)<br>
+ - `x` : la position $x$ en bas a gauche de la porte<br>
+ - `y` : la position $y$ en bas a gauche de la porte<br>
+ - `color` : la couleur de la porte<br>
+ - `fill_color` : la couleur de remplissage (par defaut blandc)<br>
+ - `turtle` : la turtle qui permet de dessiner la porte (par defaut la turtle de base)<br>
 
 
 

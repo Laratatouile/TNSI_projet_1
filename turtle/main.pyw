@@ -1,6 +1,6 @@
 from turtle import *
 import objets.lumieres as lumieres
-import objets.Immeuble as immeuble
+import objets.immeuble as immeuble
 import objets.voitures as voitures
 import objets.exterieur as exterieur
 import time

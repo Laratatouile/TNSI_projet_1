@@ -5,8 +5,10 @@ nav:
  - Turtle:
    - main.pyw: turtle/main.md
    - fonctions:
-     - formes.pyw: turtle/formes.md
- - Ascii :
+     - formes.py: turtle/formes.md
+   - objets:
+     - exterieur.py: turtle/exterieur.md
+ - Ascii:
    - Carré: ascii/carre.md
    - Triangle: ascii/triangle.md
    - Sapin: ascii/sapin.md
@@ -16,10 +18,27 @@ nav:
 
 theme:
   name: material
+  language: fr
   features:
     - navigation.tabs
     - search.highlight
     - content.code.copy
+    - navigation.instant
+    - palette
+    - palette.toggle
+    - palette.scheme
+    - palette.media
+    - header.autohide
+    - header.title
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Basculer en mode sombre
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Basculer en mode clair
 
 
 markdown_extensions:

@@ -17,7 +17,7 @@ def dessin_base(x:int):
 
 
 
-# le soleil
+# le soleil et la lune
 def soleil_obj(i:int, soleil:Turtle, screen, type:str, temps:float) -> None:
     """ fait bouger le soleil et la lune """
     temps_reste = time.time() - temps
