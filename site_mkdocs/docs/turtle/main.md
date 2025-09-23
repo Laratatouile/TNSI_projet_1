@@ -36,3 +36,6 @@ Elle prend en charge 2 arguments: <br>
  - `temps_depart` : l'heure a laquelle la fonction a été lancée pour la 1ere fois
 
 Cette fonction calcule le decalage a appliquer sur la camera en fonction du temps passé.
+
+
+

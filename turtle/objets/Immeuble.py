@@ -5,7 +5,7 @@ from turtle import *
 
 
 def immeuble(x:int):
-    """ charge les variables de base de la classe """
+    """ charge les variables de la fonction """
 
     couleur = "#{:06x}".format(random.randint(0, 0xFFFFFF))
     nombre_etages = random.randint(1, 5)

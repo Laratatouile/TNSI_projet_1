@@ -1,4 +1,8 @@
 site_name: TNSI_Projet_1
+site_description: "Documentation du projet 1 de terminale NSI"
+site_author: "Yanis Nogara et Maxime Geoffroy"
+
+
 
 nav:
  - Accueil : index.md
@@ -8,6 +12,9 @@ nav:
      - formes.py: turtle/formes.md
    - objets:
      - exterieur.py: turtle/exterieur.md
+     - immeuble.py: turtle/immeuble.md
+     - lumiere.py: turtle/lumieres.md
+     - voitures.py: turtle/voitures.md
  - Ascii:
    - Carré: ascii/carre.md
    - Triangle: ascii/triangle.md
@@ -54,3 +61,8 @@ markdown_extensions:
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+
+extra:
+  favicon: assets/images/favicon.png

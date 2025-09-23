@@ -18,7 +18,7 @@ def dessin_base(x:int):
 Cette fonction prend en charge un argument:<br>
 - `x` : la position x du debut ou l'on va créer le parterre et la route<br>
 
-### <u><span style="color:#d51515">1) la fonction</span></u> `soleil_obj` <u><span style="color:#d51515">et la fonction</span></u> `fonction_soleil_lune`<br>
+### <u><span style="color:#d51515">2) la fonction</span></u> `soleil_obj` <u><span style="color:#d51515">et la fonction</span></u> `fonction_soleil_lune`<br>
 ```python
 # le soleil et la lune
 def soleil_obj(i:int, soleil:Turtle, screen, type:str, temps:float) -> None:
@@ -53,7 +53,7 @@ Elle prend en charge des arguments:<br>
 - `type` : une chaîne de caractères soit "soleil" soit "lune"<br>
 - `temps` : la seconde a laquelle a debuté la première itération afin de calculer le decalage<br>
 
-### <u><span style="color:#d51515">1) la fonction</span></u> `lampadaires` <u><span style="color:#d51515">et la fonction</span></u> `dessin_lampadaire`<br>
+### <u><span style="color:#d51515">3) la fonction</span></u> `lampadaires` <u><span style="color:#d51515">et la fonction</span></u> `dessin_lampadaire`<br>
 ```python
 # les lampadaires
 def lampadaire(i:int) -> None:

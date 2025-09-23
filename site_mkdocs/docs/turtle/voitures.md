@@ -1,8 +1,11 @@
-import time
-import random
-from turtle import *
+# <span style="color:white; background-color:#6b6b6bff; padding:190px; padding-top:25px; padding-bottom:25px;font-size:35px">le fichier voitures.py</span>
 
+## <u><span style="color:#d51515">le fichier en petites etapes</span></u><br>
 
+Ce fichier ne possède qu'une seule fonction : la fonction `voiture`<br>
+C'est pourquoi nous allons le decouper en parties de la fonction.<br>
+
+```python
 def voitures(heure_depart:float, t_voiture:Turtle, screen, liste_voitures:list=[[], []]) -> None:
     """ affiche les voitures """
     # variables
@@ -65,3 +68,26 @@ def voitures(heure_depart:float, t_voiture:Turtle, screen, liste_voitures:list=[
 
 
     screen.ontimer(lambda:voitures(heure_depart, t_voiture, screen, liste_voitures), 1)
+```
+
+
+### <u><span style="color:#d51515">1) de la ligne 1 a 10</span></u><br>
+C'est la partie du calcul des variables.<br>
+La fonction va calculer différentes variables utiles.<br>
+
+### <u><span style="color:#d51515">2) de la ligne 14 a 31</span></u><br>
+Cette partie sert a gérérer les voitures sur la route.<br>
+Les voitures ne doivent pas etre trop collées les unes aux autres.<br>
+Elle vérifie et génère les voitures pour les deux routes.<br>
+La liste `liste_voitures` possède deux listes pour les deux sens de circulation de la route elle est initialisée dans l'en tête vide pour éviter les erreurs.<br>
+
+### <u><span style="color:#d51515">3) de la ligne 35 a 46</span></u><br>
+La fonction regarde si des voitures sont sorties de l'ecran au quel cas elle les supprimes des listes.<br>
+
+Et elle clear toutes les voitures qu'elle va redessiner ensuite.<br>
+
+### <u><span style="color:#d51515">3) de la ligne 49 a 62</span></u><br>
+La fonction redessine toutes les voiutres présentes sur les deux routes.<br>
+
+Elle se réitère ensuite avec la fonction ontimer de screen.<br>
+
