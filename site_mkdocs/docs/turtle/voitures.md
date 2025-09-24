@@ -1,6 +1,6 @@
 # <span style="color:white; background-color:#6b6b6bff; padding:190px; padding-top:25px; padding-bottom:25px;font-size:35px">le fichier voitures.py</span>
 
-## <u><span style="color:#d51515">le fichier en petites etapes</span></u><br>
+## <u><span style="color:#d51515">la fonction en petites etapes</span></u><br>
 
 Ce fichier ne possède qu'une seule fonction : la fonction `voiture`<br>
 C'est pourquoi nous allons le decouper en parties de la fonction.<br>
