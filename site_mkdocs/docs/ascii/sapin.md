@@ -1,3 +1,4 @@
+Création d'un sapin  vide 
 ```python
 def sapin(taille):
 # Étape 1 : triangle + tronc
@@ -7,8 +8,9 @@ def sapin(taille):
         print(" " * (taille - i) + "/" + " " * (2 * i - 1) + "\\")
     for k in range(3):  
         print(" " * (taille - 1) + "|||")
+```
 
-
+```python
 # Étape 2 : étoile
     print("\nsapin 2 :")
     print(" " * taille + "*")   
@@ -17,8 +19,9 @@ def sapin(taille):
         print(" " * (taille - i) + "/" + " " * (2 * i - 1) + "\\")
     for k in range(3):
         print(" " * (taille - 1) + "|||")
+```
 
-
+```python
 # Étape 3 : texture ' et "
     print("\nsapin 3 :")
     print(" " * taille + "*")
@@ -33,8 +36,9 @@ def sapin(taille):
         print(" " * (taille - i) + "/" + ligne + "\\")
     for k in range(3):
         print(" " * (taille - 1) + "|||")
+```
 
-
+```python
 # Étape 4 : décorations aléatoires
     print("\nsapin4! :")
     print(" " * taille + "*")
