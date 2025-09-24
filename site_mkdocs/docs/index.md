@@ -1,18 +1,10 @@
-# Welcome to MkDocs
+# Bienvenue sur le projet 1 de NSI de terminale
+Projet de:<br>
+ - Yanis Nogara
+ - Maxime Geoffroy
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
+## Ceci sert de documentation
+Le code entier est disponible a l'adresse [github laratatouille](https://github.com/Laratatouile/TNSI_projet_1)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
+Le projet est en trois parties qui forment les trois onglets de cette page.<br>
