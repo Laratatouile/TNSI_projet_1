@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1creation-dun-carre" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -677,6 +682,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Carré
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -688,6 +706,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1creation-dun-carre" class="md-nav__link">
+    <span class="md-ellipsis">
+      1)Création d'un carré
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2carre-avec-une-diagonale-au-milieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      2)Carré avec une diagonale au milieu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3carre-ave-une-croix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3)Carré ave une croix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4carre-origami" class="md-nav__link">
+    <span class="md-ellipsis">
+      4)carré origami
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -787,6 +858,50 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1creation-dun-carre" class="md-nav__link">
+    <span class="md-ellipsis">
+      1)Création d'un carré
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2carre-avec-une-diagonale-au-milieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      2)Carré avec une diagonale au milieu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3carre-ave-une-croix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3)Carré ave une croix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4carre-origami" class="md-nav__link">
+    <span class="md-ellipsis">
+      4)carré origami
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -803,8 +918,43 @@
 
   <h1>Carré</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>
-</code></pre></div></td></tr></table></div>
+<h3 id="1creation-dun-carre"><u><span style="color:#d51515">1)Création d'un carré</span></u><br></h3>
+<p>On commence par tracer un carré :</p>
+<p>La première et la dernière ligne sont entièrement remplies de <code>X</code>.</p>
+<p>Les lignes du milieu ne gardent que les bords, ce qui forme un carré creux.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">carre</span><span class="p">(</span><span class="n">cote</span><span class="p">):</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="c1"># Première ligne du carré</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X &quot;</span> <span class="o">*</span> <span class="n">cote</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="c1"># les lignes du milieux</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cote</span> <span class="o">-</span> <span class="mi">2</span><span class="p">):</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X &quot;</span> <span class="o">+</span> <span class="s2">&quot;  &quot;</span> <span class="o">*</span> <span class="p">(</span><span class="n">cote</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;X &quot;</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="c1"># Dernière ligne du carré</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="k">if</span> <span class="n">cote</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># pour éviter un double affichage du carré quand le cote est egale a 1</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X &quot;</span> <span class="o">*</span> <span class="n">cote</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1"># permet de choisir n&#39;importe quel nombre de &quot;X&quot; pour le carré</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Longueur du côté : &quot;</span><span class="p">))</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="n">carre</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="2carre-avec-une-diagonale-au-milieu"><u><span style="color:#d51515">2)Carré avec une diagonale au milieu</span></u><br></h3>
+<p>On reprend le carré vide et on ajoute la diagonale principale du haut a gauche jusqu'en bas a droite.
+Cela dessine une ligne traversant le carré en plus de son contour.ce qui va formé un carré avec une diagonale au milieu.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -826,7 +976,103 @@
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">carre_diagonale</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="3carre-ave-une-croix"><u><span style="color:#d51515">3)Carré ave une croix</span></u><br></h3>
+<p>Ici, le carré est complété par deux axes centraux :</p>
+<p>Une ligne horizontale au milieu.
+Une ligne verticale au milieu.
+On obtient un carré en forme de croix.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">carre_croix</span><span class="p">(</span><span class="n">cote</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cote</span><span class="p">):</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="n">ligne</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cote</span><span class="p">):</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>            <span class="c1"># Bordures</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="n">cote</span> <span class="o">-</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">==</span> <span class="n">cote</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>                <span class="n">ligne</span> <span class="o">+=</span> <span class="s2">&quot;X &quot;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>            <span class="c1"># Ligne centrale horizontale</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>            <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="n">cote</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>                <span class="n">ligne</span> <span class="o">+=</span> <span class="s2">&quot;X &quot;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>            <span class="c1"># Ligne centrale verticale</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>            <span class="k">elif</span> <span class="n">j</span> <span class="o">==</span> <span class="n">cote</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>                <span class="n">ligne</span> <span class="o">+=</span> <span class="s2">&quot;X &quot;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>            <span class="c1"># les espaces</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>                <span class="n">ligne</span> <span class="o">+=</span> <span class="s2">&quot;  &quot;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="c1"># Exemple d&#39;utilisation de notre fonction</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Longueur du côté : &quot;</span><span class="p">))</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="n">carre_croix</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="4carre-origami"><u><span style="color:#d51515">4)carré origami</span></u><br></h3>
+<p>Enfin pour ce carré,on va ajouter deux diagonales  :</p>
+<ul>
+<li>
+<p>Une diagonale descendante et complète.</p>
+</li>
+<li>
+<p>Et une diagonale montante qui s’arrête au centre.
+Le tout donne un effet “origami” à l’intérieur du carré.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">origami</span><span class="p">(</span><span class="n">cote</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cote</span><span class="p">):</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>        <span class="n">ligne</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cote</span><span class="p">):</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="n">cote</span> <span class="o">-</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">==</span> <span class="n">cote</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># bordures</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>                <span class="n">ligne</span> <span class="o">+=</span> <span class="s2">&quot;X &quot;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>            <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span><span class="p">:</span>  <span class="c1"># diagonale descendante complète</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>                <span class="n">ligne</span> <span class="o">+=</span> <span class="s2">&quot;X &quot;</span> 
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>            <span class="k">elif</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">==</span> <span class="n">cote</span> <span class="o">-</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">cote</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># diagonale montante arrêtée au milieu</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>                <span class="n">ligne</span> <span class="o">+=</span> <span class="s2">&quot;X &quot;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>                <span class="n">ligne</span> <span class="o">+=</span> <span class="s2">&quot;  &quot;</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="c1"># Exemple</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Longueur du côté : &quot;</span><span class="p">))</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="n">origami</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ul>
 
 
 
