@@ -1,6 +1,6 @@
 # Bienvenue sur le projet 1 de NSI de terminale
 Projet de:<br>
- - Yanis Nogara
+ - Yanis Nogara<br>
  - Maxime Geoffroy
 
 
