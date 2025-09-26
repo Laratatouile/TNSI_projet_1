@@ -14,6 +14,3 @@ def triangle(n):
 
 triangle(9)
 ```
-```python
-
-```
