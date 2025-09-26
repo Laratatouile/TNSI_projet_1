@@ -1,7 +1,6 @@
 from turtle import *
 import objets.lumieres as lumieres
 import objets.immeuble as immeuble
-import objets.voitures as voitures
 import objets.exterieur as exterieur
 import time
 from sys import exit
@@ -34,7 +33,7 @@ def lancement() -> None:
     t_voiture = Turtle()
     t_voiture.hideturtle()
     t_voiture.penup()
-    screen.register_shape("./turtle/images/voiture.gif")
+    #screen.register_shape("./turtle/images/voiture.gif")
 
     i = 0
 
